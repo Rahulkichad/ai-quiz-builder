@@ -1,0 +1,69 @@
+:root {
+  --main-bg: #f7faff;
+  --main-radius: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--main-bg);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #23254c;
+  min-height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 100vw;
+    padding: 0 0.2rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.1em;
+  }
+}
+
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--main-radius);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e7ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 6px;
+}

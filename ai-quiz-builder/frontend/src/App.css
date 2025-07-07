@@ -1,0 +1,8 @@
+/* Minimal App-wide CSS to prevent missing import errors and provide basic structure. You can expand this as needed. */
+
+.app-container {
+  min-height: 100vh;
+  background: none;
+  display: flex;
+  flex-direction: column;
+}

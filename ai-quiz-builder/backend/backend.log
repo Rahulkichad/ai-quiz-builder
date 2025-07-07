@@ -1,0 +1,122 @@
+INFO:     Will watch for changes in these directories: ['/Users/rahulchoudhary/Desktop/Aiquiz/ai-quiz-builder/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [95046] using StatReload
+INFO:     Started server process [95178]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2025-07-06 00:52:53,796 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:65272 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 00:53:07,863 INFO Timeout: Question 1 not answered.
+2025-07-06 00:53:07,863 INFO Timeout: Question 2 not answered.
+2025-07-06 00:53:07,863 INFO Q3 SINGLE: User: 0, Correct: 1, is_correct: False
+DEBUG: Received user_answers: [None, None, 0]
+DEBUG: Computed results: [{'question': 'What is the primary purpose of the `def` keyword in Python?', 'correct': False, 'correct_answer': 1, 'user_answer': None, 'explanation': 'The `def` keyword is used to define a function in Python. Functions are reusable blocks of code.', 'timeout': True, 'time_taken': None}, {'question': 'Which of the following is NOT a built-in data type in Python?', 'correct': False, 'correct_answer': 3, 'user_answer': None, 'explanation': "Python does not have a built-in 'Character' data type. Single characters are represented as strings of length one.", 'timeout': True, 'time_taken': None}, {'question': 'What will be the output of the following code?\n\n```python\nprint(2 + 2 * 2)\n```', 'correct': False, 'correct_answer': 1, 'user_answer': 0, 'explanation': 'Following the order of operations (PEMDAS/BODMAS), multiplication is performed before addition.  2 * 2 = 4, and then 2 + 4 = 6.', 'timeout': False, 'time_taken': None}]
+INFO:     127.0.0.1:65291 - "POST /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 00:54:33,414 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:65418 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65444 - "OPTIONS /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 00:54:51,055 INFO Timeout: Question 1 not answered.
+2025-07-06 00:54:51,055 INFO Timeout: Question 2 not answered.
+2025-07-06 00:54:51,055 INFO Q3 SINGLE: User: 1, Correct: 1, is_correct: True
+DEBUG: Received user_answers: [None, None, 1]
+DEBUG: Computed results: [{'question': 'What is the primary purpose of using functions in Python?', 'correct': False, 'correct_answer': 1, 'user_answer': None, 'explanation': 'Functions allow you to group a set of statements together to perform a specific task. This promotes code reusability, modularity, and readability.', 'timeout': True, 'time_taken': None}, {'question': 'Which of the following is the correct way to comment out a single line in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': "In Python, the '#' symbol is used to denote a single-line comment. Everything after the '#' on that line is ignored by the interpreter.", 'timeout': True, 'time_taken': None}, {'question': 'What will be the output of the following Python code?\n\nprint(2 + 2 * 2)', 'correct': True, 'correct_answer': 1, 'user_answer': 1, 'explanation': 'Due to operator precedence, multiplication is performed before addition. Thus, 2 * 2 equals 4, and then 2 + 4 equals 6.', 'timeout': False, 'time_taken': None}]
+INFO:     127.0.0.1:65444 - "POST /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 00:55:19,593 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:65487 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 00:55:36,690 INFO Timeout: Question 1 not answered.
+2025-07-06 00:55:36,691 INFO Timeout: Question 2 not answered.
+2025-07-06 00:55:36,691 INFO Q3 SINGLE: User: 1, Correct: 1, is_correct: True
+DEBUG: Received user_answers: [None, None, 1]
+DEBUG: Computed results: [{'question': 'What is the correct way to comment a single line in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': "In Python, single-line comments are denoted by the '#' symbol. Any text following '#' on the same line is treated as a comment and ignored by the interpreter.", 'timeout': True, 'time_taken': None}, {'question': 'Which of the following data types is immutable in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': 'Tuples are immutable, meaning their elements cannot be changed after the tuple is created. Lists, dictionaries, and sets are mutable.', 'timeout': True, 'time_taken': None}, {'question': 'What is the output of the following code snippet?\n\nprint(2 + 2 * 2)', 'correct': True, 'correct_answer': 1, 'user_answer': 1, 'explanation': 'Python follows the order of operations (PEMDAS/BODMAS). Multiplication is performed before addition. Therefore, 2 * 2 = 4, and then 2 + 4 = 6.', 'timeout': False, 'time_taken': None}]
+INFO:     127.0.0.1:65510 - "POST /api/submit-answers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49310 - "OPTIONS /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 00:57:40,201 INFO Generating quiz with Gemini: prompt='math', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:49310 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [95178]
+INFO:     Started server process [95362]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2025-07-06 00:58:12,545 INFO Timeout: Question 1 not answered.
+2025-07-06 00:58:12,545 INFO Timeout: Question 2 not answered.
+2025-07-06 00:58:12,545 INFO Q3 SINGLE: User: 1, Correct: 1, is_correct: True
+DEBUG: Received user_answers: [None, None, 1]
+DEBUG: Computed results: [{'question': 'What is the sum of 12 and 7?', 'correct': False, 'correct_answer': 1, 'user_answer': None, 'explanation': 'The sum of 12 and 7 is 12 + 7 = 19.', 'timeout': True, 'time_taken': None}, {'question': 'Which of the following numbers is an even number?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': 'An even number is divisible by 2. Only 10 is divisible by 2.', 'timeout': True, 'time_taken': None}, {'question': 'What is 5 multiplied by 3?', 'correct': True, 'correct_answer': 1, 'user_answer': 1, 'explanation': '5 multiplied by 3 is 5 * 3 = 15.', 'timeout': False, 'time_taken': None}]
+INFO:     127.0.0.1:49363 - "POST /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 01:00:58,783 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:49647 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49679 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:49689 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+2025-07-06 01:01:30,856 INFO Timeout: Question 1 not answered.
+2025-07-06 01:01:30,856 INFO Timeout: Question 2 not answered.
+2025-07-06 01:01:30,856 INFO Timeout: Question 3 not answered.
+DEBUG: Received user_answers: [None, None, None]
+DEBUG: Computed results: [{'question': "Which of the following is the correct way to print 'Hello, world!' to the console in Python?", 'correct': False, 'correct_answer': 0, 'user_answer': None, 'explanation': 'The `print()` function is the standard way to output text to the console in Python. Case matters in Python, so `Print()` is incorrect. The other options are from Java and shell scripting, respectively.', 'timeout': True, 'time_taken': None}, {'question': 'What data type is used to represent a sequence of characters in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': 'A sequence of characters is represented by the `string` data type in Python. Integers represent whole numbers, floats represent decimal numbers, and booleans represent True/False values.', 'timeout': True, 'time_taken': None}, {'question': 'Which of the following is a valid comment in Python?', 'correct': False, 'correct_answer': 3, 'user_answer': None, 'explanation': 'Comments in Python begin with the `#` symbol. The other options are used in languages like C++, Java, and HTML, respectively.', 'timeout': True, 'time_taken': None}]
+INFO:     127.0.0.1:49697 - "POST /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 01:01:32,017 INFO Timeout: Question 1 not answered.
+2025-07-06 01:01:32,018 INFO Timeout: Question 2 not answered.
+2025-07-06 01:01:32,018 INFO Timeout: Question 3 not answered.
+DEBUG: Received user_answers: [None, None, None]
+DEBUG: Computed results: [{'question': "Which of the following is the correct way to print 'Hello, world!' to the console in Python?", 'correct': False, 'correct_answer': 0, 'user_answer': None, 'explanation': 'The `print()` function is the standard way to output text to the console in Python. Case matters in Python, so `Print()` is incorrect. The other options are from Java and shell scripting, respectively.', 'timeout': True, 'time_taken': None}, {'question': 'What data type is used to represent a sequence of characters in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': 'A sequence of characters is represented by the `string` data type in Python. Integers represent whole numbers, floats represent decimal numbers, and booleans represent True/False values.', 'timeout': True, 'time_taken': None}, {'question': 'Which of the following is a valid comment in Python?', 'correct': False, 'correct_answer': 3, 'user_answer': None, 'explanation': 'Comments in Python begin with the `#` symbol. The other options are used in languages like C++, Java, and HTML, respectively.', 'timeout': True, 'time_taken': None}]
+INFO:     127.0.0.1:49697 - "POST /api/submit-answers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50490 - "OPTIONS /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 01:09:41,068 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:50490 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50526 - "OPTIONS /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 01:10:07,756 INFO Timeout: Question 1 not answered.
+2025-07-06 01:10:07,756 INFO Timeout: Question 2 not answered.
+2025-07-06 01:10:07,756 INFO Timeout: Question 3 not answered.
+DEBUG: Received user_answers: [None, None, None]
+DEBUG: Computed results: [{'question': "Which of the following is the correct way to print 'Hello, World!' to the console in Python?", 'correct': False, 'correct_answer': 0, 'user_answer': None, 'explanation': None, 'timeout': True, 'time_taken': None}, {'question': 'What data type is used to store whole numbers in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': None, 'timeout': True, 'time_taken': None}, {'question': "Which of the following is a valid way to define a variable named 'x' and assign it the value 10 in Python?", 'correct': False, 'correct_answer': 0, 'user_answer': None, 'explanation': None, 'timeout': True, 'time_taken': None}]
+INFO:     127.0.0.1:50526 - "POST /api/submit-answers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50815 - "OPTIONS /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 01:12:54,826 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:50815 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52309 - "OPTIONS /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 01:27:26,309 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:52309 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 01:28:37,360 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:52444 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52502 - "OPTIONS /api/submit-answers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52502 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52511 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52526 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52534 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52637 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+2025-07-06 01:31:48,887 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:52728 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52772 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52780 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52780 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52868 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52913 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+2025-07-06 01:34:00,857 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:52950 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52987 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:52999 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+2025-07-06 01:36:24,927 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:53156 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53191 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53201 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53212 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53219 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53219 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53382 - "OPTIONS /api/generate-quiz HTTP/1.1" 200 OK
+2025-07-06 01:38:36,140 INFO Generating quiz with Gemini: prompt='cell', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:53382 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53409 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53418 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53424 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53431 - "POST /api/submit-answers HTTP/1.1" 422 Unprocessable Entity
+2025-07-06 01:40:48,756 INFO Generating quiz with Gemini: prompt='python', role='teacher', diff='easy', num_q=3
+INFO:     127.0.0.1:53628 - "POST /api/generate-quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53647 - "OPTIONS /api/submit-answers HTTP/1.1" 200 OK
+2025-07-06 01:41:02,431 INFO Q1 SINGLE: User: 0, Correct: 3, is_correct: False
+2025-07-06 01:41:02,431 INFO Q2 SINGLE: User: 1, Correct: 1, is_correct: True
+2025-07-06 01:41:02,431 INFO Timeout: Question 3 not answered.
+DEBUG: Received user_answers: [0, 1, None]
+DEBUG: Computed results: [{'question': 'Which of the following is a valid way to declare a string in Python?', 'correct': False, 'correct_answer': 3, 'user_answer': 0, 'explanation': None, 'timeout': False, 'time_taken': None}, {'question': 'What will be the output of the following Python code?\n\nprint(2 + 2 * 2)', 'correct': True, 'correct_answer': 1, 'user_answer': 1, 'explanation': None, 'timeout': False, 'time_taken': None}, {'question': 'Which of the following data types is immutable in Python?', 'correct': False, 'correct_answer': 2, 'user_answer': None, 'explanation': None, 'timeout': True, 'time_taken': None}]
+INFO:     127.0.0.1:53647 - "POST /api/submit-answers HTTP/1.1" 200 OK
