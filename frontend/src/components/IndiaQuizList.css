@@ -1,0 +1,71 @@
+.india-quiz-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.india-quiz-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 1.5rem 1.25rem;
+  cursor: pointer;
+  transition: transform 0.13s, box-shadow 0.13s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  max-width: 95vw;
+}
+.india-quiz-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(99,102,241,0.12);
+}
+.india-quiz-emoji {
+  font-size: clamp(2.3rem, 7vw, 3.6rem);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+.india-quiz-title {
+  font-weight: 700;
+  font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+}
+.india-quiz-desc {
+  color: #666;
+  text-align: center;
+  min-height: 48px;
+  font-size: clamp(0.95rem, 2vw, 1.08rem);
+}
+.quiz-functionality-coming-soon {
+  margin-top: 2rem;
+  color: #888;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .india-quiz-card {
+    width: 46vw;
+    min-width: 180px;
+    padding: 1.2rem 0.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .india-quiz-grid {
+    gap: 1rem;
+  }
+  .india-quiz-card {
+    width: 98vw;
+    min-width: 0;
+    padding: 1rem 0.3rem;
+  }
+  .india-quiz-title {
+    font-size: 1.04rem;
+  }
+}

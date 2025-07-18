@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  background: #f7f9fc;
+  color: #3a3a7c;
+  padding: 1.2rem 0 0.5rem 0;
+  text-align: center;
+  border-top: 1px solid #e0e7ef;
+  margin-top: 3rem;
+  font-size: 1.08rem;
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  color: #4f8cff;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.footer-links a:hover {
+  color: #7f53ff;
+}
+.footer-sep {
+  color: #b0b9ce;
+  margin: 0 0.2rem;
+}
+.footer-copy {
+  font-size: 0.97rem;
+  color: #7b7b9c;
+}
