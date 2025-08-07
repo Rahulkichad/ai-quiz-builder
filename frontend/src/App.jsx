@@ -11,10 +11,6 @@ import Contact from './pages/Contact';
 import QuizBuilder from './components/QuizBuilder';
 import PredefinedQuizzes from './pages/PredefinedQuizzes';
 import IndiaQuizzes from './pages/IndiaQuizzes';
-import CreateQuiz from './pages/CreateQuiz';
-import JoinQuiz from './pages/JoinQuiz';
-import QuizRoom from './pages/QuizRoom';
-import Collaborative from './pages/Collaborative';
 
 function App() {
   return (
@@ -28,11 +24,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/quizzes" element={<PredefinedQuizzes />} />
         <Route path="/india" element={<IndiaQuizzes />} />
-        {/* Collaborative Quiz routes */}
-        <Route path="/collaborative" element={<Collaborative />} />
-        <Route path="/collab-create" element={<CreateQuiz />} />
-        <Route path="/collab-join" element={<JoinQuiz />} />
-        <Route path="/quiz/:quizId" element={<QuizRoom />} />
       </Routes>
       <Footer />
     </Router>

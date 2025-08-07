@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './IndiaQuizList.css';
+import { fetchQuiz, QuizBoard } from './QuizBuilder';
 
 const indiaQuizzes = [
   {
@@ -7,7 +8,10 @@ const indiaQuizzes = [
     title: 'Indian History',
     description: 'Test your knowledge of ancient to modern Indian history!',
     emoji: '📜',
-    questions: [/* ... */],
+    prompt: 'Generate a comprehensive quiz about Indian history covering ancient, medieval, and modern periods',
+    role: 'teacher',
+    difficulty: 'medium',
+    num_questions: 20
   },
   {
     id: 2,
@@ -96,20 +100,46 @@ const indiaQuizzes = [
   // ...add more India-centric quizzes here...
 ];
 
-
-
 const IndiaQuizList = () => {
   const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [quiz, setQuiz] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  if (selectedQuiz) {
+  const handleQuizSelect = async (quiz) => {
+    setSelectedQuiz(quiz);
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await fetchQuiz({
+        prompt: quiz.prompt,
+        role: quiz.role,
+        difficulty: quiz.difficulty,
+        num_questions: quiz.num_questions,
+        explanations: true
+      });
+      setQuiz({ ...data, topic: quiz });
+    } catch (err) {
+      setError(err.message || 'Failed to generate quiz');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRestart = () => {
+    setQuiz(null);
+    setSelectedQuiz(null);
+    setError(null);
+  };
+
+  if (loading) return <div style={{textAlign:'center',marginTop:'2rem'}}>Generating quiz...</div>;
+  if (error) return <div style={{color:'red',textAlign:'center',marginTop:'2rem'}}>{error}</div>;
+
+  if (quiz && selectedQuiz) {
     return (
-      <div style={{ maxWidth: 600, margin: '0 auto', background: '#fff', borderRadius: 12, boxShadow: '0 4px 24px #0001', padding: 32 }}>
-        <button onClick={() => setSelectedQuiz(null)} style={{ marginBottom: 16, background: 'none', border: 'none', color: '#007bff', cursor: 'pointer' }}>← Back to quizzes</button>
-        <h2>{selectedQuiz.title}</h2>
-        <div style={{fontSize: 54, marginBottom: 12, textAlign: 'center'}}>{selectedQuiz.emoji}</div>
-        <p style={{ marginTop: 16 }}>{selectedQuiz.description}</p>
-        {/* TODO: Render quiz questions and interactive UI here */}
-        <div className="quiz-functionality-coming-soon">Quiz functionality coming soon!</div>
+      <div style={{maxWidth: 700, margin: '0 auto'}}>
+        <button onClick={handleRestart} style={{marginBottom: 16, background: 'none', border: 'none', color: '#007bff', cursor: 'pointer'}}>← Back to topics</button>
+        <QuizBoard quiz={quiz} onRestart={handleRestart} />
       </div>
     );
   }
@@ -117,7 +147,7 @@ const IndiaQuizList = () => {
   return (
     <div className="india-quiz-grid">
       {indiaQuizzes.map(quiz => (
-        <div key={quiz.id} className="india-quiz-card" onClick={() => setSelectedQuiz(quiz)}>
+        <div key={quiz.id} className="india-quiz-card" onClick={() => handleQuizSelect(quiz)}>
           <div className="india-quiz-emoji">{quiz.emoji}</div>
           <h3 className="india-quiz-title">{quiz.title}</h3>
           <p className="india-quiz-desc">{quiz.description}</p>
